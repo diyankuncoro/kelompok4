@@ -1,87 +1,57 @@
-@extends('layouts.app')
-
-@section('css')
-<!-- Custom styles for this template -->
-<style>
-  :root {
-    --jumbotron-padding-y: 3rem;
-  }
-  .jumbotron {
-    padding-top: var(--jumbotron-padding-y);
-    padding-bottom: var(--jumbotron-padding-y);
-    margin-bottom: 0;
-    background-color: #fff;
-  }
-  @media (min-width: 768px) {
-    .jumbotron {
-      padding-top: calc(var(--jumbotron-padding-y) * 2);
-      padding-bottom: calc(var(--jumbotron-padding-y) * 2);
-    }
-  }
-  .jumbotron p:last-child {
-    margin-bottom: 0;
-  }
-  .jumbotron-heading {
-    font-weight: 300;
-  }
-  .jumbotron .container {
-    max-width: 40rem;
-  }
-  footer {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-  footer p {
-    margin-bottom: .25rem;
-  }
-  .box-shadow { 
-    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); 
-  }
-  
-  .card {
-    color: #212529;
-  }
-  
-  .card:hover {
-    box-shadow: 0 28px 36px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    color: #000000;
-  }
-  
-  .link-card{
-    text-decoration: none;
-  
-  }
-  
-  .link-navbar{
-    color: #343a40;
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
     
-  }
-  
-  .link-navbar:hover{
-    text-decoration: none;
-    color: #b3b3b3!important;
-  }
-  
-  .text{
-    color: #ff0000;
-  }
-  
-  .card-bar:hover{
-    box-shadow: none;
-  }
-  
-  .card-bar{
-    
-    border-radius: 8px;
-    
-  }
-  
-</style>
-@endsection
+<!--  Start Nave bar    -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-@section('content')
-
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+    <a class="nav-link" href="login">login</a>
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+    
+  <!--  End Nave Bar    -->
+    
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -89,25 +59,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block mw-100 w-100" src="http://www.opusnusantara.com/images/Slider1.jpg" alt="First slide">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Ini Judul</h5>
-        <p>Ini Subjudul</p>
-      </div>
+      <img class="d-block w-100" src="http://getwallpapers.com/wallpaper/full/5/d/9/10588.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block mw-100 w-100" src="http://www.opusnusantara.com/images/Slider2.jpg" alt="Second slide">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Ini Judul</h5>
-        <p>Ini Subjudul</p>
-      </div>
+      <img class="d-block w-100" src="http://wallpaperswide.com/download/nike_9-wallpaper-3840x2160.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block mw-100 w-100" src="http://www.opusnusantara.com/images/logo_opus.jpg" alt="Third slide">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Ini Judul</h5>
-        <p>Ini Subjudul</p>
-      </div>
+      <img class="d-block w-100" src="http://wallpaperswide.com/download/nike_9-wallpaper-3840x2160.jpg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -119,21 +77,62 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
-
-<div class="album py-5 bg-light">
-  <div class="container">
     
-      <div class="alert alert-success" role="alert">
-      <h4 class="alert-heading">Well done!</h4>
-      <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-      <hr>
-      <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+<!--start jumbotron-->
+  <div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+  </div>
+<!--  end jumbotron    -->
+    
+<!--  menentukan posisi card    -->
+<div class="container">
+   <!--   start Card   -->
+<div class="row">
+  
+  <div class="col-md-4">
+     <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="http://www.opusnusantara.com/images/Poster_KPP_2018.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+       </div> 
     </div>
-@endsection
-
-
-@section('js')
-<script>
-</script>
-@endsection
+  </div>
+  
+  <div class="col-md-4">
+     <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="http://www.opusnusantara.com/images/Poster_BIOPC_2017.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+       </div> 
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+     <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="http://www.opusnusantara.com/images/Poster_BOPC_2017.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+       </div> 
+    </div>
+  </div>
+</div>
+<!--   end card   -->
+  
+</div>
+      
+  </div>
+  </script>
+  </body>
+</html>
